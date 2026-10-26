@@ -67,11 +67,11 @@ Inseridos: 6. Repetidos ignorados: 0.
 
 Opcao: 5
 30 [fb=0]
-+--E 20 [fb=0]
-|  +--E 10 [fb=0]
-|  +--D 25 [fb=0]
-+--D 40 [fb=-1]
-   +--D 50 [fb=0]
+├─E 20 [fb=0]
+│  ├─E 10 [fb=0]
+│  └─D 25 [fb=0]
+└─D 40 [fb=-1]
+   └─D 50 [fb=0]
 ```
 
 ### Testes (`make test`)
@@ -83,7 +83,7 @@ Executa 182 testes automatizados cobrindo:
 - Insercao de valores repetidos
 - Insercao em quatro ordens: crescente, decrescente, aleatoria, quase ordenada
 - Buscas de existentes e inexistentes
-- Remocao de folha, no com um filho, no com dois filhos
+- Remocao de folha e no com dois filhos
 - Remover a raiz repetidamente ate esvaziar
 - 5000 operacoes aleatorias comparadas com std::set
 - Limite de altura com 20.000 chaves
@@ -127,9 +127,9 @@ Os 182 testes estao agrupados por categoria:
 - **Arvore vazia (14 testes):** verifica comportamento inicial em ambas as arvores
 - **Um elemento (22 testes):** insercao, busca, remocao e validade
 - **Repetidos (10 testes):** insert retorna false e nada muda
-- **Insercao em 4 ordens (32 testes):** percurso, altura e validade para cada ordem/arvore
+- **Insercao em 4 ordens (26 testes):** percurso, altura e validade para cada ordem/arvore
 - **Buscas (10 testes):** pares existentes, impares inexistentes, bordas (0, -5, enorme)
-- **Remocoes (12 testes):** folha, 1 filho, 2 filhos com random(63,11)
+- **Remocoes (12 testes):** folha e 2 filhos com random(63,11)
 - **Remover raiz (2 testes):** esvazia inserindo 1..15 e removendo sempre a raiz
 - **random(500) (4 testes):** insere random(500,3) e remove na ordem random(500,4)
 - **Inexistentes (10 testes):** remove 0, 51, -1 de arvore com 1..50
@@ -137,7 +137,7 @@ Os 182 testes estao agrupados por categoria:
 - **Altura 20000 (2 testes):** limites teoricos AVL e RB
 - **Casos AVL (12 testes):** LL, RR, LR, RL com contagem exata
 - **Casos RB (13 testes):** 1,2,3; caso 1; 3,1,2; colorOf
-- **Validadores (3 testes):** deteccao de corrupcao manual
+- **Validadores (2 testes):** deteccao de corrupcao manual
 - **BST degenerada (2 testes):** altura n e comparacao com AVL
 - **Comparacao (6 testes):** mesmos retornos, percurso e tamanho
 - **Impressao (12 testes):** saida de aceitacao para ambas as arvores
