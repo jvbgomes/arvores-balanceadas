@@ -1,0 +1,13 @@
+# Manter o binario Linux x86-64 conforme exigencia do enunciado
+# bin/arvores-balanceadas e rastreado
+
+# Outros binarios de execucao nao precisam ser versionados
+bin/tests
+bin/bench
+bin/demo
+
+# Arquivos temporarios do editor
+*.o
+*.d
+*~
+.*.swp

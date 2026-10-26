@@ -1,0 +1,231 @@
+=== Demo Roteirizado: AVL + Rubro-Negra ===
+
+============================================================
+  Passo 1: inserir 10, 20, 30
+============================================================
+
+--- AVL ---
+20 [fb=0]
+├─E 10 [fb=0]
+└─D 30 [fb=0]
+Legenda: fb = fator de balanceamento, E = esquerda, D = direita
+
+--- RB  ---
+20 (P)
+├─E 10 (V)
+└─D 30 (V)
+Legenda: (V) vermelho, (P) preto, E = esquerda, D = direita
+  AVL | h=2 rot=1 LL=0 RR=1 LR=0 RL=0
+  RB  | h=2 rot=1 rec=3
+
+============================================================
+  Passo 2: inserir 30, 10, 20 (rotação dupla)
+============================================================
+
+--- AVL ---
+20 [fb=0]
+├─E 10 [fb=0]
+└─D 30 [fb=0]
+Legenda: fb = fator de balanceamento, E = esquerda, D = direita
+
+--- RB  ---
+20 (P)
+├─E 10 (V)
+└─D 30 (V)
+Legenda: (V) vermelho, (P) preto, E = esquerda, D = direita
+  AVL | h=2 rot=2 LL=0 RR=0 LR=1 RL=0
+  RB  | h=2 rot=2 rec=3
+
+============================================================
+  Passo 3: RB - inserir 10, 5, 15 e depois 1 (caso 1: só recolore)
+============================================================
+Após 10, 5, 15: h=2 rot=0 rec=1
+Após inserir 1: rot=0 rec=4
+Cores: 10=preto 5=preto 15=preto 1=vermelho
+10 (P)
+├─E 5 (P)
+│  └─E 1 (V)
+└─D 15 (P)
+Legenda: (V) vermelho, (P) preto, E = esquerda, D = direita
+
+============================================================
+  Passo 4: inserir 1..15 em ordem crescente
+============================================================
+
+--- AVL ---
+8 [fb=0]
+├─E 4 [fb=0]
+│  ├─E 2 [fb=0]
+│  │  ├─E 1 [fb=0]
+│  │  └─D 3 [fb=0]
+│  └─D 6 [fb=0]
+│     ├─E 5 [fb=0]
+│     └─D 7 [fb=0]
+└─D 12 [fb=0]
+   ├─E 10 [fb=0]
+   │  ├─E 9 [fb=0]
+   │  └─D 11 [fb=0]
+   └─D 14 [fb=0]
+      ├─E 13 [fb=0]
+      └─D 15 [fb=0]
+Legenda: fb = fator de balanceamento, E = esquerda, D = direita
+
+--- RB  ---
+4 (P)
+├─E 2 (P)
+│  ├─E 1 (P)
+│  └─D 3 (P)
+└─D 8 (V)
+   ├─E 6 (P)
+   │  ├─E 5 (P)
+   │  └─D 7 (P)
+   └─D 10 (P)
+      ├─E 9 (P)
+      └─D 12 (V)
+         ├─E 11 (P)
+         └─D 14 (P)
+            ├─E 13 (V)
+            └─D 15 (V)
+Legenda: (V) vermelho, (P) preto, E = esquerda, D = direita
+  AVL | h=4 rot=11 LL=0 RR=11 LR=0 RL=0
+  RB  | h=6 rot=9 rec=45
+  RB nós vermelhos: 8 12 13 15 
+
+============================================================
+  Passo 5: busca de 7 e de 99 na árvore 1..15
+============================================================
+AVL busca 7:  encontrado
+AVL busca 99: não encontrado
+RB  busca 7:  preto
+RB  busca 99: ausente
+
+============================================================
+  Passo 6: inserção repetida e remoção de inexistente
+============================================================
+AVL inserir 7 (repetido): ignorado
+AVL remover 99 (inexist): não encontrado
+RB  inserir 7 (repetido): ignorado
+RB  remover 99 (inexist): não encontrado
+
+============================================================
+  Passo 7: remoções em {50,30,70,20,40,60,80,10,65}
+============================================================
+Árvore inicial:
+
+--- AVL ---
+50 [fb=0]
+├─E 30 [fb=1]
+│  ├─E 20 [fb=1]
+│  │  └─E 10 [fb=0]
+│  └─D 40 [fb=0]
+└─D 70 [fb=1]
+   ├─E 60 [fb=-1]
+   │  └─D 65 [fb=0]
+   └─D 80 [fb=0]
+Legenda: fb = fator de balanceamento, E = esquerda, D = direita
+
+--- RB  ---
+50 (P)
+├─E 30 (V)
+│  ├─E 20 (P)
+│  │  └─E 10 (V)
+│  └─D 40 (P)
+└─D 70 (V)
+   ├─E 60 (P)
+   │  └─D 65 (V)
+   └─D 80 (P)
+Legenda: (V) vermelho, (P) preto, E = esquerda, D = direita
+
+Removendo 10 (folha):
+
+--- AVL ---
+50 [fb=-1]
+├─E 30 [fb=0]
+│  ├─E 20 [fb=0]
+│  └─D 40 [fb=0]
+└─D 70 [fb=1]
+   ├─E 60 [fb=-1]
+   │  └─D 65 [fb=0]
+   └─D 80 [fb=0]
+Legenda: fb = fator de balanceamento, E = esquerda, D = direita
+
+--- RB  ---
+50 (P)
+├─E 30 (V)
+│  ├─E 20 (P)
+│  └─D 40 (P)
+└─D 70 (V)
+   ├─E 60 (P)
+   │  └─D 65 (V)
+   └─D 80 (P)
+Legenda: (V) vermelho, (P) preto, E = esquerda, D = direita
+  AVL | h=4 rot=0 LL=0 RR=0 LR=0 RL=0
+  RB  | h=4 rot=0 rec=11
+
+Removendo 30 (1 filho potencial):
+
+--- AVL ---
+50 [fb=-1]
+├─E 40 [fb=1]
+│  └─E 20 [fb=0]
+└─D 70 [fb=1]
+   ├─E 60 [fb=-1]
+   │  └─D 65 [fb=0]
+   └─D 80 [fb=0]
+Legenda: fb = fator de balanceamento, E = esquerda, D = direita
+
+--- RB  ---
+50 (P)
+├─E 40 (P)
+│  └─E 20 (V)
+└─D 70 (V)
+   ├─E 60 (P)
+   │  └─D 65 (V)
+   └─D 80 (P)
+Legenda: (V) vermelho, (P) preto, E = esquerda, D = direita
+  AVL | h=4 rot=0 LL=0 RR=0 LR=0 RL=0
+  RB  | h=4 rot=0 rec=13
+
+Removendo 70 (2 filhos):
+
+--- AVL ---
+50 [fb=0]
+├─E 40 [fb=1]
+│  └─E 20 [fb=0]
+└─D 65 [fb=0]
+   ├─E 60 [fb=0]
+   └─D 80 [fb=0]
+Legenda: fb = fator de balanceamento, E = esquerda, D = direita
+
+--- RB  ---
+50 (P)
+├─E 40 (P)
+│  └─E 20 (V)
+└─D 65 (V)
+   ├─E 60 (P)
+   └─D 80 (P)
+Legenda: (V) vermelho, (P) preto, E = esquerda, D = direita
+  AVL | h=3 rot=2 LL=0 RR=0 LR=1 RL=0
+  RB  | h=3 rot=2 rec=18
+
+Removendo a raiz 50:
+
+--- AVL ---
+60 [fb=0]
+├─E 40 [fb=1]
+│  └─E 20 [fb=0]
+└─D 65 [fb=-1]
+   └─D 80 [fb=0]
+Legenda: fb = fator de balanceamento, E = esquerda, D = direita
+
+--- RB  ---
+60 (P)
+├─E 40 (P)
+│  └─E 20 (V)
+└─D 65 (P)
+   └─D 80 (V)
+Legenda: (V) vermelho, (P) preto, E = esquerda, D = direita
+  AVL | h=3 rot=2 LL=0 RR=0 LR=1 RL=0
+  RB  | h=3 rot=2 rec=20
+
+Demo concluído. Saída gravada em results/demo-output.txt

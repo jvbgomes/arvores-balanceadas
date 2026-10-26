@@ -1,0 +1,250 @@
+=== Suite de Testes: AVL + Rubro-Negra ===
+
+[AVL - Árvore vazia]
+  ✔ AVL: busca em vazia retorna false
+  ✔ AVL: remoção em vazia retorna false
+  ✔ AVL: percurso vazio
+  ✔ AVL: altura vazia = 0
+  ✔ AVL: tamanho vazio = 0
+  ✔ AVL: impressão de vazia mostra mensagem correta
+  ✔ AVL vazia válida
+
+[RB - Árvore vazia]
+  ✔ RB: busca em vazia retorna false
+  ✔ RB: remoção em vazia retorna false
+  ✔ RB: percurso vazio
+  ✔ RB: altura vazia = 0
+  ✔ RB: tamanho vazio = 0
+  ✔ RB: impressão de vazia mostra mensagem correta
+  ✔ RB vazia válida
+
+[AVL - Um elemento]
+  ✔ AVL: insere 42
+  ✔ AVL: busca 42 encontra
+  ✔ AVL: busca 1 não encontra
+  ✔ AVL: tamanho = 1
+  ✔ AVL: altura = 1
+  ✔ AVL 1 elem válida
+  ✔ AVL: percurso = [42]
+  ✔ AVL: remove 42
+  ✔ AVL: remove 42 de novo = false
+  ✔ AVL: tamanho = 0 depois
+  ✔ AVL após remoção válida
+
+[RB - Um elemento]
+  ✔ RB: insere 42
+  ✔ RB: busca 42 encontra
+  ✔ RB: busca 1 não encontra
+  ✔ RB: tamanho = 1
+  ✔ RB: altura = 1
+  ✔ RB 1 elem válida
+  ✔ RB: percurso = [42]
+  ✔ RB: remove 42
+  ✔ RB: remove 42 de novo = false
+  ✔ RB: tamanho = 0 depois
+  ✔ RB após remoção válida
+
+[AVL - Valores repetidos]
+  ✔ AVL: inserir 10 de novo retorna false
+  ✔ AVL: inserir 20 de novo retorna false
+  ✔ AVL: tamanho permanece 2
+  ✔ AVL: conteúdo inalterado após duplicatas
+  ✔ AVL após duplicatas válida
+
+[RB - Valores repetidos]
+  ✔ RB: inserir 10 de novo retorna false
+  ✔ RB: inserir 20 de novo retorna false
+  ✔ RB: tamanho permanece 2
+  ✔ RB: conteúdo inalterado após duplicatas
+  ✔ RB após duplicatas válida
+
+[AVL + RB - Inserção crescente n=1000]
+  ✔ AVL crescente: válida a cada inserção
+  ✔ AVL crescente: percurso em ordem 1..1000
+  ✔ AVL crescente: altura 10 <= 2*log2(1000+1)+1
+  ✔ AVL crescente após inserção completa válida
+  ✔ RB crescente: válida a cada inserção
+  ✔ RB crescente: percurso em ordem 1..1000
+  ✔ RB crescente: altura 17 <= 2*log2(1000+1)+1
+  ✔ RB crescente após inserção completa válida
+
+[AVL + RB - Inserção decrescente n=1000]
+  ✔ AVL decrescente: percurso em ordem 1..1000
+  ✔ AVL decrescente: altura 10 <= 2*log2(1000+1)+1
+  ✔ AVL decrescente após inserção completa válida
+  ✔ RB decrescente: percurso em ordem 1..1000
+  ✔ RB decrescente: altura 17 <= 2*log2(1000+1)+1
+  ✔ RB decrescente após inserção completa válida
+
+[AVL + RB - Inserção random(1000,42)]
+  ✔ AVL rand42: percurso em ordem 1..1000
+  ✔ AVL rand42: altura 12 <= 2*log2(1000+1)+1
+  ✔ AVL rand42 após inserção completa válida
+  ✔ RB rand42: percurso em ordem 1..1000
+  ✔ RB rand42: altura 12 <= 2*log2(1000+1)+1
+  ✔ RB rand42 após inserção completa válida
+
+[AVL + RB - Inserção quase ordenada(1000,42)]
+  ✔ AVL quasi42: percurso em ordem 1..1000
+  ✔ AVL quasi42: altura 12 <= 2*log2(1000+1)+1
+  ✔ AVL quasi42 após inserção completa válida
+  ✔ RB quasi42: percurso em ordem 1..1000
+  ✔ RB quasi42: altura 17 <= 2*log2(1000+1)+1
+  ✔ RB quasi42 após inserção completa válida
+
+[AVL - Buscas]
+  ✔ AVL: todos os pares existem
+  ✔ AVL: ímpares além de n não existem
+  ✔ AVL: 0 não existe
+  ✔ AVL: -5 não existe
+  ✔ AVL: valor enorme não existe
+
+[RB - Buscas]
+  ✔ RB: todos os pares existem
+  ✔ RB: ímpares além de n não existem
+  ✔ RB: 0 não existe
+  ✔ RB: -5 não existe
+  ✔ RB: valor enorme não existe
+
+[AVL - Remoções (folha/1 filho/2 filhos) com random(63,11)]
+  ✔ AVL após inserção 63 válida
+  ✔ AVL: remove folha 1
+  ✔ AVL após remover folha válida
+  ✔ AVL: remove nó com 2 filhos
+  ✔ AVL após remover 2 filhos válida
+  ✔ AVL: percurso em ordem crescente após remoções
+
+[RB - Remoções (folha/1 filho/2 filhos) com random(63,11)]
+  ✔ RB após inserção 63 válida
+  ✔ RB: remove folha 1
+  ✔ RB após remover folha válida
+  ✔ RB: remove nó com 2 filhos
+  ✔ RB após remover 2 filhos válida
+  ✔ RB: percurso em ordem crescente após remoções
+
+[AVL - Remover raiz repetidamente até esvaziar]
+  ✔ AVL: remover raiz 15 vezes esvaziou a árvore
+
+[RB - Remover raiz repetidamente até esvaziar]
+  ✔ RB: remover raiz 15 vezes esvaziou a árvore
+
+[AVL - Remover todas as chaves de random(500,3) na ordem de random(500,4)]
+  ✔ AVL: valida a cada remoção de random(500,4)
+  ✔ AVL: árvore vazia ao final
+
+[RB - Remover todas as chaves de random(500,3) na ordem de random(500,4)]
+  ✔ RB: valida a cada remoção de random(500,4)
+  ✔ RB: árvore vazia ao final
+
+[AVL - Remoção de inexistentes (1..50 inseridos)]
+  ✔ AVL: remove 0 retorna false
+  ✔ AVL: remove 51 retorna false
+  ✔ AVL: remove -1 retorna false
+  ✔ AVL: tamanho inalterado
+  ✔ AVL inexistentes válida
+
+[RB - Remoção de inexistentes (1..50 inseridos)]
+  ✔ RB: remove 0 retorna false
+  ✔ RB: remove 51 retorna false
+  ✔ RB: remove -1 retorna false
+  ✔ RB: tamanho inalterado
+  ✔ RB inexistentes válida
+
+[AVL - 5000 operações aleatórias vs std::set]
+  ✔ AVL: retornos coincidem com std::set em 5000 ops
+  ✔ AVL: válida a cada operação
+  ✔ AVL: percurso final igual ao std::set
+  ✔ AVL: tamanho igual ao std::set
+
+[RB - 5000 operações aleatórias vs std::set]
+  ✔ RB: retornos coincidem com std::set em 5000 ops
+  ✔ RB: válida a cada operação
+  ✔ RB: percurso final igual ao std::set
+  ✔ RB: tamanho igual ao std::set
+
+[AVL - Limite de altura 20000 chaves crescentes]
+  ✔ AVL: altura 15 <= 1.4405*log2(n+2)+0.6723=22
+
+[RB - Limite de altura 20000 chaves crescentes]
+  ✔ RB: altura 26 <= 2*log2(n+1)+1=30
+
+[AVL - Casos conhecidos]
+  ✔ AVL: 1,2,3 → raiz=2
+  ✔ AVL: 1,2,3 → 1 rotação
+  ✔ AVL: 1,2,3 → caso RR
+  ✔ AVL: 1,2,3 → altura=2
+  ✔ AVL: 3,2,1 → raiz=2
+  ✔ AVL: 3,2,1 → caso LL
+  ✔ AVL: 3,1,2 → raiz=2
+  ✔ AVL: 3,1,2 → caso LR
+  ✔ AVL: 3,1,2 → 2 rotações
+  ✔ AVL: 1,3,2 → raiz=2
+  ✔ AVL: 1,3,2 → caso RL
+  ✔ AVL: 1,3,2 → 2 rotações
+
+[RB - Casos conhecidos]
+  ✔ RB: 1,2,3 → raiz=2
+  ✔ RB: 1,2,3 → raiz preta
+  ✔ RB: 1,2,3 → 1 vermelho
+  ✔ RB: 1,2,3 → 3 vermelho
+  ✔ RB: 1,2,3 → 1 rotação
+  ✔ RB: após inserir 1 em {10,5,15} → 0 rotações
+  ✔ RB: 10 preto
+  ✔ RB: 5 preto
+  ✔ RB: 15 preto
+  ✔ RB: 1 vermelho
+  ✔ RB: 3,1,2 → raiz=2
+  ✔ RB: 3,1,2 → 2 rotações
+  ✔ RB: colorOf inexistente = ausente
+
+[Validadores detectam erros injetados]
+  ✔ AVL: detecta chave corrompida e altura errada
+  ✔ RB: detecta raiz vermelha
+
+[BST - Degeneração e comparação com AVL]
+  ✔ BST: altura 2000 com 1..2000
+  ✔ BST: altura > 100x AVL (2000 vs 11)
+
+[Comparação AVL vs RB com random(800,77) e remoções]
+  ✔ Comparação: mesmos retornos de insert
+  ✔ Comparação: mesmos retornos de remove
+  ✔ Comparação: mesmo tamanho final
+  ✔ Comparação: mesmo percurso final
+  ✔ AVL final comparação válida
+  ✔ RB final comparação válida
+
+[Impressão – saída de aceitação (10 20 30 40 50 25)]
+  ✔ AVL print: raiz 30 fb=0
+  ✔ AVL print: ├─E 20
+  ✔ AVL print: │  ├─E 10
+  ✔ AVL print: │  └─D 25
+  ✔ AVL print: └─D 40 fb=-1
+  ✔ AVL print: └─D 50
+  ✔ RB print: raiz 20 P
+  ✔ RB print: ├─E 10 P
+  ✔ RB print: └─D 40 V
+  ✔ RB print: ├─E 30 P
+  ✔ RB print: │  └─E 25 V
+  ✔ RB print: └─D 50 P
+
+[Remoção de 20 → altura 3 em ambas as árvores]
+  ✔ AVL: altura=3 após remover 20
+  ✔ AVL: raiz=30 após remover 20
+  ✔ AVL: esq=25 com filho esq=10
+  ✔ AVL: dir=40 com filho dir=50
+  ✔ RB: altura=3 após remover 20
+  ✔ RB após remover 20 válida
+
+[Inserção 1..15 crescente (saída de aceitação)]
+  ✔ AVL 1..15: altura=4
+  ✔ AVL 1..15: 11 rotações
+  ✔ RB 1..15: altura=6
+  ✔ RB 1..15: 9 rotações
+  ✔ RB 1..15: 45 recolorações
+  ✔ RB 1..15: 8 vermelho
+  ✔ RB 1..15: 12 vermelho
+  ✔ RB 1..15: 13 vermelho
+  ✔ RB 1..15: 15 vermelho
+
+=== Resumo ===
+Total: 182 | Aprovados: 182 | Falhas: 0

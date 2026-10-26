@@ -1,0 +1,110 @@
+[
+  {
+    "n": 1000,
+    "dataset": "crescente",
+    "bst": { "h": 1000, "prof": 500.50 },
+    "avl_ins": { "h": 10, "prof": 8.99, "rot": 990 },
+    "avl_rem": { "h": 10, "rot": 75 },
+    "rb_ins": { "h": 17, "prof": 9.41, "rot": 983, "rec": 4909 },
+    "rb_rem": { "h": 10, "rot": 101, "rec": 1118 }
+  },
+  {
+    "n": 1000,
+    "dataset": "decrescente",
+    "bst": { "h": 1000, "prof": 500.50 },
+    "avl_ins": { "h": 10, "prof": 8.99, "rot": 990 },
+    "avl_rem": { "h": 10, "rot": 95 },
+    "rb_ins": { "h": 17, "prof": 9.41, "rot": 983, "rec": 4909 },
+    "rb_rem": { "h": 10, "rot": 110, "rec": 1130 }
+  },
+  {
+    "n": 1000,
+    "dataset": "quase ord",
+    "bst": { "h": 161, "prof": 42.99 },
+    "avl_ins": { "h": 12, "prof": 9.15, "rot": 1108 },
+    "avl_rem": { "h": 11, "rot": 145 },
+    "rb_ins": { "h": 17, "prof": 9.63, "rot": 1182, "rec": 4334 },
+    "rb_rem": { "h": 11, "rot": 165, "rec": 1086 }
+  },
+  {
+    "n": 1000,
+    "dataset": "aleatoria",
+    "bst": { "h": 24, "prof": 11.72 },
+    "avl_ins": { "h": 12, "prof": 9.22, "rot": 668 },
+    "avl_rem": { "h": 11, "rot": 190 },
+    "rb_ins": { "h": 12, "prof": 9.25, "rot": 581, "rec": 2319 },
+    "rb_rem": { "h": 12, "rot": 176, "rec": 773 }
+  },
+  {
+    "n": 10000,
+    "dataset": "crescente",
+    "bst": { "h": 10000, "prof": 5000.50 },
+    "avl_ins": { "h": 14, "prof": 12.36, "rot": 9986 },
+    "avl_rem": { "h": 14, "rot": 868 },
+    "rb_ins": { "h": 24, "prof": 12.89, "rot": 9976, "rec": 49877 },
+    "rb_rem": { "h": 14, "rot": 980, "rec": 11323 }
+  },
+  {
+    "n": 10000,
+    "dataset": "decrescente",
+    "bst": { "h": 10000, "prof": 5000.50 },
+    "avl_ins": { "h": 14, "prof": 12.36, "rot": 9986 },
+    "avl_rem": { "h": 14, "rot": 836 },
+    "rb_ins": { "h": 24, "prof": 12.89, "rot": 9976, "rec": 49877 },
+    "rb_rem": { "h": 14, "rot": 929, "rec": 11355 }
+  },
+  {
+    "n": 10000,
+    "dataset": "quase ord",
+    "bst": { "h": 657, "prof": 127.82 },
+    "avl_ins": { "h": 15, "prof": 12.55, "rot": 12109 },
+    "avl_rem": { "h": 15, "rot": 1577 },
+    "rb_ins": { "h": 23, "prof": 12.96, "rot": 12516, "rec": 43774 },
+    "rb_rem": { "h": 15, "rot": 1576, "rec": 10881 }
+  },
+  {
+    "n": 10000,
+    "dataset": "aleatoria",
+    "bst": { "h": 31, "prof": 16.47 },
+    "avl_ins": { "h": 16, "prof": 12.60, "rot": 6930 },
+    "avl_rem": { "h": 15, "rot": 1900 },
+    "rb_ins": { "h": 16, "prof": 12.62, "rot": 5841, "rec": 23125 },
+    "rb_rem": { "h": 15, "rot": 1774, "rec": 7671 }
+  },
+  {
+    "n": 100000,
+    "dataset": "crescente",
+    "bst": { "h": 100000, "prof": 50000.50 },
+    "avl_ins": { "h": 17, "prof": 15.69, "rot": 99983 },
+    "avl_rem": { "h": 17, "rot": 8420 },
+    "rb_ins": { "h": 31, "prof": 16.10, "rot": 99969, "rec": 499846 },
+    "rb_rem": { "h": 18, "rot": 9375, "rec": 113807 }
+  },
+  {
+    "n": 100000,
+    "dataset": "decrescente",
+    "bst": { "h": 100000, "prof": 50000.50 },
+    "avl_ins": { "h": 17, "prof": 15.69, "rot": 99983 },
+    "avl_rem": { "h": 17, "rot": 8273 },
+    "rb_ins": { "h": 31, "prof": 16.10, "rot": 99969, "rec": 499846 },
+    "rb_rem": { "h": 18, "rot": 9133, "rec": 113513 }
+  },
+  {
+    "n": 100000,
+    "dataset": "quase ord",
+    "bst": { "h": 3319, "prof": 182.79 },
+    "avl_ins": { "h": 20, "prof": 15.98, "rot": 120065 },
+    "avl_rem": { "h": 19, "rot": 16368 },
+    "rb_ins": { "h": 30, "prof": 16.53, "rot": 125816, "rec": 438708 },
+    "rb_rem": { "h": 20, "rot": 15566, "rec": 109520 }
+  },
+  {
+    "n": 100000,
+    "dataset": "aleatoria",
+    "bst": { "h": 40, "prof": 20.61 },
+    "avl_ins": { "h": 20, "prof": 15.92, "rot": 69742 },
+    "avl_rem": { "h": 19, "rot": 18848 },
+    "rb_ins": { "h": 20, "prof": 15.96, "rot": 58191, "rec": 231855 },
+    "rb_rem": { "h": 19, "rot": 18120, "rec": 77444 }
+  }
+]
